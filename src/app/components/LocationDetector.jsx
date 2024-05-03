@@ -4,9 +4,8 @@ import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function LocationDetector() {
+const LocationDetector = () => {
   const [loading, setLoading] = useState(false);
-
   const searchParams = useSearchParams();
   const pathName = usePathname();
   const router = useRouter();
@@ -43,4 +42,6 @@ export default function LocationDetector() {
       )}
     </div>
   );
-}
+};
+
+export default LocationDetector;
